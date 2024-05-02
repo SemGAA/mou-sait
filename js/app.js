@@ -63,3 +63,6 @@ paginationButtons.forEach(button => {
 });
 
 updatePagination(currentPage);
+
+
+
