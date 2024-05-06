@@ -66,3 +66,15 @@ updatePagination(currentPage);
 
 
 
+const filterButtons = document.querySelectorAll(".filter-button");
+const imageContainers = document.querySelectorAll(".image-container");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach(button => {
+      button.classList.remove("active");
+    });
+    
+    button.classList.add("active");
+    });
+  });
