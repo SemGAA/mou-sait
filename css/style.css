@@ -8,9 +8,12 @@ a{
   color: #000000;
   
 }
+main{
+  margin-top: 60px;
+}
 
 .header {
-  margin: 30px 5%;
+  margin: 30px, 5%;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   
@@ -39,7 +42,6 @@ body{
   background: none;
   border: none;
   cursor: pointer;
-  margin-left: 20px;
 }
 
 .search-icon-container {
@@ -73,7 +75,7 @@ body{
 }
 
 button.button {
-  margin-right: 10px;
+  margin: 0px 10% 0px 10%;
   padding: 0 15px;
   width: 96px;
   height: 45px;
@@ -94,12 +96,11 @@ button.button:hover {
     width: 73px;
     height: 73px;
     border-radius: 50%;
-    margin-left: 10px;
 }
 .newVideo h1 {
     font-size: 25px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     text-align: center;
 }
 
@@ -191,7 +192,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 30px 0;
+    padding: 15px 0;
 }
 
 .button-columns3 a{
@@ -253,7 +254,7 @@ body {
 
 .image-conect {  
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 20px;
   padding: 25px 0;

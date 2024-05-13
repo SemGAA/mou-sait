@@ -29,6 +29,9 @@ const updatePagination = (pageNumber) => {
   document.querySelector(`#page-${currentPage}`).classList.add('active');
 };
 
+
+
+// пагинатор
 const paginationButtons = document.querySelectorAll('.pagination-button');
 
 document.getElementById('prev-page').addEventListener('click', () => {
@@ -65,16 +68,29 @@ paginationButtons.forEach(button => {
 updatePagination(currentPage);
 
 
+// выбор категории
 
-const filterButtons = document.querySelectorAll(".filter-button");
-const imageContainers = document.querySelectorAll(".image-container");
+const allButton = document.getElementById('all-button');
+const completedButton = document.getElementById('completed-button');
 
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    filterButtons.forEach(button => {
-      button.classList.remove("active");
-    });
-    
-    button.classList.add("active");
-    });
+allButton.addEventListener('click', () => {
+  document.querySelectorAll('.item-poster').forEach(item => {
+    item.style.display = 'block';
   });
+
+  allButton.classList.add('active');
+  completedButton.classList.remove('active');
+});
+
+completedButton.addEventListener('click', () => {
+  document.querySelectorAll('.item-poster').forEach(item => {
+    if (item.querySelector('.overlay span').innerText.includes('заверш')) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+
+  completedButton.classList.add('active');
+  allButton.classList.remove('active');
+});
